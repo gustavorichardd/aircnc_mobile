@@ -21,7 +21,7 @@ export default function Login({ navigation }) {
       const response = await api.post('/sessions', {
          email
       })
-      
+
       const { _id } = response.data;
 
       await AsyncStorage.setItem('user', _id);
